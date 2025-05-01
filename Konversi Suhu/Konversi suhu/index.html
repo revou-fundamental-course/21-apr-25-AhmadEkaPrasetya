@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Konversi Suhu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="converter">
+    <h2>Konversi Suhu</h2>
+
+    <!-- menu Konversi dari celcius ke fahrenheit -->
+    <div class="section">
+      <label for="celsiusInput"><strong>Celcius ke Fahrenheit :</strong></label>
+      <input type="number" id="celsiusInput" placeholder="masukkan angka" />
+      <button onclick="konversikefahrenheit()">Konversi ke Fahrenheit</button>
+      <div class="error" id="celsiusError"></div>
+      <div class="result" id="fahrenheitResult"></div>
+      <div class="formula" id="fahrenheitFormula"></div>
+    </div>
+   
+    <!-- menu konversi dari fahrenheit ke celcius -->
+    <div class="section">
+      <label for="fahrenheitInput"><strong>Fahrenheit ke Celcius:</strong></label>
+      <input type="number" id="fahrenheitInput" placeholder="masukkan angka" />
+      <button onclick="konversikecelcius()">Konversi ke Celsius</button>
+      <div class="error" id="fahrenheitError"></div>
+      <div class="result" id="celsiusResult"></div>
+      <div class="formula" id="celsiusFormula"></div>
+    </div>
+
+    <!-- tombol reset -->
+    <button class="reset-button" onclick="resetFields()">Reset</button>
+
+    <!-- cara perhitungannya -->
+    <div class="explanation">
+      <h3>Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h3>
+      <p>
+        Suhu <em>S</em> dalam derajat Fahrenheit (°F) sama dengan suhu <em>S</em> dalam derajat Celsius (°C) kali <strong>9/5</strong> tambah <strong>32</strong>.
+      </p>
+      <p>
+        <strong>S(°F) = (S(°C) × 9/5) + 32</strong><br/>
+        atau<br/>
+        <strong>S(°F) = (S(°C) × 1.8) + 32</strong>
+      </p>
+
+      <h3>Cara Konversi Dari Fahrenheit (°F) ke Celsius (°C)</h3>
+      <p>
+        Suhu <em>S</em> dalam derajat Celsius (°C) sama dengan suhu <em>S</em> dalam derajat Fahrenheit (°F) dikurang <strong>32</strong>, lalu dikali <strong>5/9</strong>.
+      </p>
+      <p>
+        <strong>S(°C) = (S(°F) - 32) × 5/9</strong><br/>
+        atau<br/>
+        <strong>S(°C) = (S(°F) - 32) × 0.555...</strong>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
